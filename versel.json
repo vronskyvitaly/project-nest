@@ -1,7 +1,8 @@
 {
+  "version": 2,
   "builds": [
     {
-      "main": "src/main.ts",
+      "src": "src/main.ts",
       "use": "@versel/node"
     }
     ],
