@@ -2,7 +2,6 @@ import { Module } from '@nestjs/common';
 import { BooksModule } from './books/books.module';
 import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
-import * as process from 'process';
 
 @Module({
   imports: [
@@ -10,7 +9,9 @@ import * as process from 'process';
       envFilePath: '.env',
       isGlobal: true,
     }),
-    MongooseModule.forRoot(process.env.DB_URI),
+    MongooseModule.forRoot(
+      'mongodb+srv://vitaly:7615680KM@cluster0.rn1kxbn.mongodb.net/nest',
+    ),
     BooksModule,
   ],
 })
